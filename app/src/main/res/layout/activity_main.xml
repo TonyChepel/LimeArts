@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/back_main"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bg_image" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_avatar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="-75dp"
+                app:layout_constraintBottom_toBottomOf="@+id/back_main"
+                app:layout_constraintEnd_toEndOf="@+id/back_main"
+                app:layout_constraintStart_toStartOf="@+id/back_main"
+                android:src="@drawable/user_avatar"
+                app:civ_border_width="3dp"
+                app:civ_border_color="#FFFFFF"
+                />
+
+            <TextView
+                android:id="@+id/tv_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="User Name"
+                android:textColor="#333232"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/image_avatar"
+                app:layout_constraintStart_toStartOf="@+id/image_avatar"
+                app:layout_constraintTop_toBottomOf="@+id/image_avatar" />
+
+            <Button
+                android:id="@+id/b_story"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:text="Add Story"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_text"
+                app:icon="@drawable/ic_add"
+                app:iconGravity="textStart"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                />
+
+            <Button
+                android:id="@+id/b_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Edit profile"
+                android:textAllCaps="false"
+                android:textColor="#333232"
+                android:textSize="16sp"
+                app:backgroundTint="#E3E5EA"
+                app:layout_constraintEnd_toStartOf="@+id/b_more"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/b_story"
+                app:icon="@drawable/ic_edit_b"
+                app:iconTint="#333232"
+                app:iconGravity="textStart"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                />
+
+            <Button
+                android:id="@+id/b_more"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="..."
+                android:textAllCaps="false"
+                android:textColor="#333232"
+                android:textSize="14sp"
+                app:backgroundTint="#E3E5EA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/b_story" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="#E3E5EA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/b_edit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcViewPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/profile_item"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969931228785",
+    "project_id": "lime-arts",
+    "storage_bucket": "lime-arts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969931228785:android:259de9392f9370376bbdd0",
+        "android_client_info": {
+          "package_name": "com.lime.arts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969931228785-6mh5nfcj6nk41oj4hjgb22bl29qloio4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbpog6KVWUYqCWnGEhvOsuKcgGjsLnrWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969931228785-6mh5nfcj6nk41oj4hjgb22bl29qloio4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
